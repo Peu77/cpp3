@@ -1,12 +1,10 @@
-//
-// Created by Emil Ebert on 24.03.25.
-//
 
 #include "ScavTrap.h"
+#include "colors.h"
 #include <iostream>
 
 ScavTrap::ScavTrap() {
-    std::cout << "ScavTrap default constructor called" << std::endl;
+    std::cout << BLUE << "ScavTrap default constructor called" << RESET << std::endl;
     hitPoints = 100;
     energyPoints = 50;
     attackDamage = 20;
@@ -14,7 +12,7 @@ ScavTrap::ScavTrap() {
 }
 
 ScavTrap::ScavTrap(std::string name) {
-    std::cout << "ScavTrap name constructor called" << std::endl;
+    std::cout << BLUE << "ScavTrap name constructor called" << RESET << std::endl;
     hitPoints = 100;
     energyPoints = 50;
     attackDamage = 20;
@@ -22,12 +20,12 @@ ScavTrap::ScavTrap(std::string name) {
 }
 
 ScavTrap::ScavTrap(const ScavTrap& other) {
-    std::cout << "ScavTrap copy constructor called" << std::endl;
+    std::cout << BLUE << "ScavTrap copy constructor called" << RESET << std::endl;
     *this = other;
 }
 
 ScavTrap& ScavTrap::operator=(const ScavTrap& other) {
-    std::cout << "ScavTrap copy assignment operator called" << std::endl;
+    std::cout << BLUE << "ScavTrap copy assignment operator called" << RESET << std::endl;
     if (this != &other) {
         this->hitPoints = other.hitPoints;
         this->energyPoints = other.energyPoints;
@@ -38,11 +36,24 @@ ScavTrap& ScavTrap::operator=(const ScavTrap& other) {
 }
 
 ScavTrap::~ScavTrap() {
-    std::cout << "ScavTrap " << name << " destructor called" << std::endl;
+    std::cout << BLUE << "ScavTrap " << name << " destructor called" << RESET << std::endl;
+}
+
+void ScavTrap::attack(const std::string& target) {
+    if (energyPoints <= 0) {
+        std::cout << YELLOW << "ScavTrap " << name << " is out of energy and cannot attack!" << RESET << std::endl;
+        return;
+    }
+    if (hitPoints <= 0) {
+        std::cout << YELLOW << "ScavTrap " << name << " is too damaged to attack!" << RESET << std::endl;
+        return;
+    }
+
+    std::cout << RED << "ScavTrap " << name << " strikes " << target
+              << ", dealing " << attackDamage << " points of damage!" << RESET << std::endl;
+    energyPoints--;
 }
 
 void ScavTrap::guardGate() {
-    std::cout << "ScavTrap " << name << " has entered in Gate keeper mode" << std::endl;
+    std::cout << GREEN << "ScavTrap " << name << " has entered in Gate keeper mode" << RESET << std::endl;
 }
-
-

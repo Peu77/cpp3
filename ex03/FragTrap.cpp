@@ -1,12 +1,9 @@
-//
-// Created by Emil Ebert on 24.03.25.
-//
-
 #include "FragTrap.h"
+#include "colors.h"
 #include <iostream>
 
 FragTrap::FragTrap() {
-    std::cout << "FragTrap default constructor called" << std::endl;
+    std::cout << YELLOW << "FragTrap default constructor called" << RESET << std::endl;
     hitPoints = 100;
     energyPoints = 100;
     attackDamage = 30;
@@ -14,7 +11,7 @@ FragTrap::FragTrap() {
 }
 
 FragTrap::FragTrap(std::string name) {
-    std::cout << "FragTrap name constructor called" << std::endl;
+    std::cout << YELLOW << "FragTrap name constructor called" << RESET << std::endl;
     hitPoints = 100;
     energyPoints = 100;
     attackDamage = 30;
@@ -22,12 +19,12 @@ FragTrap::FragTrap(std::string name) {
 }
 
 FragTrap::FragTrap(const FragTrap& other) {
-    std::cout << "FragTrap copy constructor called" << std::endl;
+    std::cout << YELLOW << "FragTrap copy constructor called" << RESET << std::endl;
     *this = other;
 }
 
 FragTrap& FragTrap::operator=(const FragTrap& other) {
-    std::cout << "FragTrap copy assignment operator called" << std::endl;
+    std::cout << YELLOW << "FragTrap copy assignment operator called" << RESET << std::endl;
     if (this != &other) {
         this->hitPoints = other.hitPoints;
         this->energyPoints = other.energyPoints;
@@ -38,9 +35,9 @@ FragTrap& FragTrap::operator=(const FragTrap& other) {
 }
 
 FragTrap::~FragTrap() {
-    std::cout << "FragTrap " << name << " destructor called" << std::endl;
+    std::cout << YELLOW << "FragTrap " << name << " destructor called" << RESET << std::endl;
 }
 
 void FragTrap::highFivesGuys() {
-    std::cout << "FragTrap " << name << " requests a high five!" << std::endl;
+    std::cout << CYAN << "FragTrap " << name << " requests a high five!" << RESET << std::endl;
 }
