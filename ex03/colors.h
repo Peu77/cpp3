@@ -6,7 +6,7 @@
 /*   By: eebert <eebert@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 17:46:03 by eebert            #+#    #+#             */
-/*   Updated: 2025/02/23 20:13:05 by eebert           ###   ########.fr       */
+/*   Updated: 2025/03/29 20:39:42 by eebert           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@
 #define MAGENTA "\033[35m"
 #define CYAN "\033[36m"
 #define WHITE "\033[37m"
+#define ORANGE "\033[38;5;208m"
 #define BOLD "\033[1m"
 
 #endif
