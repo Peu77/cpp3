@@ -26,6 +26,5 @@ int main(void)
     FragTrap ft2("FT-8000");
     FragTrap ft3(ft2);
     ft3 = ft;
-
     return 0;
 }
