@@ -8,6 +8,10 @@
 
 
 class FragTrap : virtual public ClapTrap {
+protected:
+    static constexpr int hitPointsConst = 100;
+    static constexpr int energyPointsConst = 50;
+    static constexpr int attackDamageConst = 30;
 public:
     FragTrap();
 

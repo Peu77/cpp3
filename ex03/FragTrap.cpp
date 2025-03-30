@@ -4,17 +4,17 @@
 
 FragTrap::FragTrap() {
     std::cout << YELLOW << "FragTrap default constructor called" << RESET << std::endl;
-    hitPoints = 100;
-    energyPoints = 100;
-    attackDamage = 30;
+    hitPoints = hitPointsConst;
+    energyPoints = energyPointsConst;
+    attackDamage = attackDamageConst;
     this->name = "default";
 }
 
 FragTrap::FragTrap(std::string name) {
     std::cout << YELLOW << "FragTrap name constructor called" << RESET << std::endl;
-    hitPoints = 100;
-    energyPoints = 100;
-    attackDamage = 30;
+    hitPoints = hitPointsConst;
+    energyPoints = energyPointsConst;
+    attackDamage = attackDamageConst;
     this->name = name;
 }
 

@@ -5,17 +5,17 @@
 
 ScavTrap::ScavTrap() {
     std::cout << BLUE << "ScavTrap default constructor called" << RESET << std::endl;
-    hitPoints = 100;
-    energyPoints = 50;
-    attackDamage = 20;
+    hitPoints = hitPointsConst;
+    energyPoints = energyPointsConst;
+    attackDamage = attackDamageConst;
     this->name = "default";
 }
 
 ScavTrap::ScavTrap(std::string name) {
     std::cout << BLUE << "ScavTrap name constructor called" << RESET << std::endl;
-    hitPoints = 100;
-    energyPoints = 50;
-    attackDamage = 20;
+    hitPoints = hitPointsConst;
+    energyPoints = energyPointsConst;
+    attackDamage = attackDamageConst;
     this->name = name;
 }
 

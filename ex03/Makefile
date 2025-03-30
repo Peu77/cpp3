@@ -1,5 +1,5 @@
 CC = c++
-CFLAGS = -Wall -Wextra -Werror -std=c++17
+CFLAGS = -Wall -Wextra -Werror -std=c++17 -Wshadow -Wno-shadow
 SRC = main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp DiamondTrap.cpp
 OBJ = $(SRC:.cpp=.o)
 NAME = ex03
