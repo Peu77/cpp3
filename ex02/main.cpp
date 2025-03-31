@@ -1,5 +1,6 @@
 #include <iostream>
 #include "FragTrap.h"
+#include "ClapTrap.h"
 
 int main(void)
 {

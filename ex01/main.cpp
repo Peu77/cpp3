@@ -1,5 +1,6 @@
 #include <iostream>
 #include "ScavTrap.h"
+#include "ClapTrap.h"
 
 int main(void) {
 	std::cout << "=== Testing ScavTrap Constructors ===" << std::endl;
