@@ -8,15 +8,13 @@ ScavTrap::ScavTrap() {
     hitPoints = hitPointsConst;
     energyPoints = energyPointsConst;
     attackDamage = attackDamageConst;
-    this->name = "default";
 }
 
-ScavTrap::ScavTrap(std::string name) {
+ScavTrap::ScavTrap(std::string name): ClapTrap(name + "_clap_name") {
     std::cout << BLUE << "ScavTrap name constructor called" << RESET << std::endl;
     hitPoints = hitPointsConst;
     energyPoints = energyPointsConst;
     attackDamage = attackDamageConst;
-    this->name = name;
 }
 
 ScavTrap::ScavTrap(const ScavTrap& other) {

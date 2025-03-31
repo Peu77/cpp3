@@ -12,6 +12,10 @@ DiamondTrap::DiamondTrap() : ClapTrap("default_clap_name") {
     this->hitPoints = FragTrap::hitPointsConst;
     this->energyPoints = ScavTrap::energyPointsConst;
     this->attackDamage = FragTrap::attackDamageConst;
+
+    std::cout << ORANGE <<  "HitPoints: " << this->hitPoints << RESET << std::endl;
+    std::cout << ORANGE <<  "EnergyPoints: " << this->energyPoints << RESET << std::endl;
+    std::cout << ORANGE <<  "AttackDamage: " << this->attackDamage << RESET << std::endl;
 }
 
 DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name + "_clap_name"){
@@ -20,6 +24,10 @@ DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name + "_clap_name"){
     this->hitPoints = FragTrap::hitPointsConst;
     this->energyPoints = ScavTrap::energyPointsConst;
     this->attackDamage = FragTrap::attackDamageConst;
+
+    std::cout << ORANGE <<  "HitPoints: " << this->hitPoints << RESET << std::endl;
+    std::cout << ORANGE <<  "EnergyPoints: " << this->energyPoints << RESET << std::endl;
+    std::cout << ORANGE <<  "AttackDamage: " << this->attackDamage << RESET << std::endl;
 }
 
 DiamondTrap::DiamondTrap(const DiamondTrap &other) : ClapTrap(other) {

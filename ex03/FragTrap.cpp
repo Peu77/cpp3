@@ -7,15 +7,13 @@ FragTrap::FragTrap() {
     hitPoints = hitPointsConst;
     energyPoints = energyPointsConst;
     attackDamage = attackDamageConst;
-    this->name = "default";
 }
 
-FragTrap::FragTrap(std::string name) {
+FragTrap::FragTrap(std::string name): ClapTrap(name + "_clap_name") {
     std::cout << YELLOW << "FragTrap name constructor called" << RESET << std::endl;
     hitPoints = hitPointsConst;
     energyPoints = energyPointsConst;
     attackDamage = attackDamageConst;
-    this->name = name;
 }
 
 FragTrap::FragTrap(const FragTrap& other) {
