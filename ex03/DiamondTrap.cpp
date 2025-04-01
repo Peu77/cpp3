@@ -30,7 +30,7 @@ DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name + "_clap_name"){
     std::cout << ORANGE <<  "AttackDamage: " << this->attackDamage << RESET << std::endl;
 }
 
-DiamondTrap::DiamondTrap(const DiamondTrap &other) : ClapTrap(other) {
+DiamondTrap::DiamondTrap(const DiamondTrap &other) :  ClapTrap(other),FragTrap(other),  ScavTrap(other)  {
     std::cout << ORANGE << "DiamondTrap copy constructor called" << RESET << std::endl;
     *this = other;
 }
